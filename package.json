@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "app.ts",
   "scripts": {
-    "server": "npx ts-node app.ts",
+    "lockdown": "npx ts-node app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
