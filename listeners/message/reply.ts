@@ -1,6 +1,6 @@
 import { AllMiddlewareArgs, SlackEventMiddlewareArgs } from "@slack/bolt";
-import getRandomQuote from "../../utils/helpers/track-quotes";
-import wait from "../../utils/helpers/wait";
+import getRandomQuote from "../../utils/helpers/track-quotes.ts";
+import wait from "../../utils/helpers/wait.ts";
 
 const reply = async ({
   event,

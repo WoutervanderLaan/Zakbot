@@ -1,7 +1,7 @@
 import { App as SlackApp } from "@slack/bolt";
 import { Response } from "express";
-import { CHANNEL_ID, ExpressApp } from "../../app";
-import getRandomQuote from "../../utils/helpers/track-quotes";
+import { CHANNEL_ID, ExpressApp } from "../../app.ts";
+import getRandomQuote from "../../utils/helpers/track-quotes.ts";
 
 const register = (app: ExpressApp, slackApp: SlackApp) => {
   app.get("/trigger", (_, res: Response) => {

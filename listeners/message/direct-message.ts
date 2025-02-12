@@ -1,6 +1,6 @@
 import { AllMiddlewareArgs, SlackEventMiddlewareArgs } from "@slack/bolt";
-import wait from "../../utils/helpers/wait";
-import getRandomQuote from "../../utils/helpers/track-quotes";
+import wait from "../../utils/helpers/wait.ts";
+import getRandomQuote from "../../utils/helpers/track-quotes.ts";
 
 const directMessage = async ({
   event,

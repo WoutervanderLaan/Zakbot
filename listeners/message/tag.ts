@@ -1,5 +1,5 @@
 import { AllMiddlewareArgs, SlackEventMiddlewareArgs } from "@slack/bolt";
-import wait from "../../utils/helpers/wait";
+import wait from "../../utils/helpers/wait.ts";
 
 const tag = async ({
   event,

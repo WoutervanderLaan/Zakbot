@@ -1,8 +1,8 @@
 import { App } from "@slack/bolt";
 import dotenv from "dotenv";
 import express from "express";
-import registerListeners from "./listeners";
-import registerEndpoints from "./endpoints";
+import registerListeners from "./listeners/index.ts";
+import registerEndpoints from "./endpoints/index.ts";
 
 const app = express();
 app.use(express.json());

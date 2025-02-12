@@ -1,7 +1,7 @@
 import type { App } from "@slack/bolt";
-import reply from "./reply";
-import tag from "./tag";
-import directMessage from "./direct-message";
+import reply from "./reply.ts";
+import tag from "./tag.ts";
+import directMessage from "./direct-message.ts";
 
 const TRIGGERS = ["zak", "zakbot", "ghosts", "ghost", "paranormal"];
 
