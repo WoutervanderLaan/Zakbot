@@ -14,10 +14,12 @@
     "@slack/bolt": "^4.2.0",
     "@slack/web-api": "^7.8.0",
     "dotenv": "^16.4.7",
+    "express": "^5.0.1",
     "fs": "^0.0.1-security"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.1",
     "typescript": "^5.7.3"

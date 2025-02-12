@@ -1,20 +1,37 @@
 import { App } from "@slack/bolt";
 import dotenv from "dotenv";
+import express from "express";
 import registerListeners from "./listeners";
+import registerEndpoints from "./endpoints";
+
+const app = express();
+app.use(express.json());
+
+const PORT = 3000;
+
+export type ExpressApp = typeof app;
+export const CHANNEL_ID = process.env.CHANNEL_ID!;
 
 dotenv.config();
 
-const app = new App({
+const slackApp = new App({
   token: process.env.SLACK_BOT_TOKEN,
   appToken: process.env.SLACK_APP_TOKEN,
+  signingSecret: process.env.SIGNING_SECRET,
   socketMode: true,
 });
 
-registerListeners(app);
+registerListeners(slackApp);
+registerEndpoints(app, slackApp);
 
 const init = async () => {
-  await app.start();
-  app.logger.info("👻 ZakBot listening for whispers 👻");
+  await slackApp.start();
+
+  slackApp.logger.info("👻 ZakBot listening for whispers 👻");
+
+  app.listen(PORT, () =>
+    slackApp.logger.info(`Server running on port ${PORT}`)
+  );
 };
 
 init();
