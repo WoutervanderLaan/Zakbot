@@ -1,4 +1,4 @@
-import { App as SlackApp } from "@slack/bolt";
+import type { App as SlackApp } from "@slack/bolt";
 import { Response } from "express";
 import { CHANNEL_ID, ExpressApp } from "../../app.ts";
 import getRandomQuote from "../../utils/helpers/track-quotes.ts";

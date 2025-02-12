@@ -1,8 +1,10 @@
-import { App } from "@slack/bolt";
+import pkg from "@slack/bolt";
 import dotenv from "dotenv";
 import express from "express";
 import registerListeners from "./listeners/index.ts";
 import registerEndpoints from "./endpoints/index.ts";
+
+const { App } = pkg;
 
 const app = express();
 app.use(express.json());
