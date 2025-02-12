@@ -7,7 +7,7 @@
   "type": "module",
   "main": "app.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup app.ts --out-dir dist --format esm",
     "start": "node dist/app.js"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.1",
     "ts-node": "^10.9.2",
+    "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   }
 }
